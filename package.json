@@ -4,8 +4,7 @@
   "description": "PF2 Web UI",
   "main": "index.js",
   "scripts": {
-    "start": "start-storybook -p 6005",
-    "build": "cross-env NODE_ENV=production webpack --progress --config conf/webpack/webpack.config.babel.js"
+    "start": "start-storybook -p 6005"
   },
   "repository": {
     "type": "git",

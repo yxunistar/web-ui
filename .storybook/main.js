@@ -6,6 +6,11 @@ module.exports = {
     webpackFinal: async (config, { configType }) => {
         const finalConfig = {
             ...config,
+            entry: "./index.js",
+            output: {
+                path: path.resolve(__dirname, "dist"),
+                filename: "dist.bundle.js",
+            },
             resolve: {
                 ...config.resolve,
                 extensions: [".js", ".jsx", ".json", ".css", ".sass"],
