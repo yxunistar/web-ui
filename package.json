@@ -4,7 +4,8 @@
   "description": "PF2 Web UI",
   "main": "index.js",
   "scripts": {
-    "start": "start-storybook -p 6005"
+    "start": "start-storybook -p 6005",
+    "build": "npx webpack --config ./config/webpack.config.js"
   },
   "repository": {
     "type": "git",

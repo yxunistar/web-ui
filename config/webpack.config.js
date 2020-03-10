@@ -1,7 +1,8 @@
 'use strict'
 
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+// const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ROOT = path.resolve(__dirname, "../");
 
 module.exports = {
   entry: "./index.js",
@@ -34,7 +35,7 @@ module.exports = {
   },
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(ROOT, "dist"),
     libraryTarget: "umd",
     library: "pf2-web-ui"
   }
