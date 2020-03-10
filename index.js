@@ -5,4 +5,4 @@
 
 // export * from './components'
 
-export { default as Button } from "./src/components/Button";
+export { default as Button } from "~/Button";
