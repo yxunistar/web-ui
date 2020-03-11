@@ -7,7 +7,6 @@ const pkg = require("../package.json");
 
 module.exports = {
     entry: "./src/index.js",
-    mode: "development",
     resolve: {
         extensions: [".wasm", ".mjs", ".js", ".json"],
         modules: ["node_modules", path.resolve(ROOT, "src"), path.resolve(ROOT, "src/components")],
@@ -40,7 +39,7 @@ module.exports = {
     },
     output: {
         filename: "index.js",
-        path: path.resolve(ROOT, "build"),
+        path: path.resolve(ROOT, "dist"),
         libraryTarget: "umd",
         library: pkg.name,
     },
