@@ -8,6 +8,12 @@
     "build": "npx webpack --config ./config/webpack.config.js",
     "build-storybook": "build-storybook"
   },
+  "files": [
+    "*.md",
+    "dist",
+    "src",
+    ".storybook"
+  ],
   "repository": {
     "type": "git",
     "url": "git@gitlab.yxunistar.com:RD/pf2-web-ui.git"
