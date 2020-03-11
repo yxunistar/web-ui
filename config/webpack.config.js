@@ -3,9 +3,10 @@
 const path = require("path");
 // const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ROOT = path.resolve(__dirname, "../");
+const pkg = require("../package.json");
 
 module.exports = {
-    entry: "./index.js",
+    entry: "./src/index.js",
     mode: "development",
     resolve: {
         extensions: [".wasm", ".mjs", ".js", ".json"],
@@ -41,6 +42,21 @@ module.exports = {
         filename: "index.js",
         path: path.resolve(ROOT, "dist"),
         libraryTarget: "umd",
-        library: "pf2-web-ui",
+        library: pkg.name,
+    },
+    externals: {
+        // Don't bundle react or react-dom
+        react: {
+            commonjs: "react",
+            commonjs2: "react",
+            amd: "React",
+            root: "React",
+        },
+        "react-dom": {
+            commonjs: "react-dom",
+            commonjs2: "react-dom",
+            amd: "ReactDOM",
+            root: "ReactDOM",
+        },
     },
 };
