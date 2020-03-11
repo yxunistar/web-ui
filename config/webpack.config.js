@@ -8,10 +8,8 @@ module.exports = {
     entry: "./index.js",
     mode: "development",
     resolve: {
-        alias: {
-            "~": path.resolve(__dirname, "../src/components/"),
-        },
         extensions: [".wasm", ".mjs", ".js", ".json"],
+        modules: ["node_modules", path.resolve(ROOT, "src"), path.resolve(ROOT, "src/components")],
     },
     module: {
         rules: [
