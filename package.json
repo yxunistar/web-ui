@@ -10,7 +10,7 @@
   },
   "files": [
     "*.md",
-    "dist",
+    "build",
     "src",
     ".storybook"
   ],
