@@ -40,7 +40,7 @@ module.exports = {
     },
     output: {
         filename: "index.js",
-        path: path.resolve(ROOT, "dist"),
+        path: path.resolve(ROOT, "build"),
         libraryTarget: "umd",
         library: pkg.name,
     },

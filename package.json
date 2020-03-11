@@ -2,7 +2,7 @@
   "name": "pf2-web-ui",
   "version": "1.0.0",
   "description": "PF2 Web UI",
-  "main": "dist/index.js",
+  "main": "./build/index.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build": "npx webpack --config ./config/webpack.config.js",
