@@ -5,9 +5,7 @@
     "main": "./dist/index.js",
     "scripts": {
         "start": "start-storybook -p 6006",
-        "build": "babel src -d build",
-        "prepare": "yarn run build",
-        "build-ui": "npx webpack --config ./.storybook/webpack.config.product.js",
+        "build": "npx webpack --config ./.storybook/webpack.config.product.js",
         "build-storybook": "build-storybook"
     },
     "files": [
@@ -40,12 +38,8 @@
         "@storybook/addon-links": "^5.3.14",
         "@storybook/addons": "^5.3.14",
         "@storybook/react": "^5.3.14",
-        "babel-cli": "^6.26.0",
         "babel-eslint": "^10.1.0",
         "babel-loader": "^8.0.6",
-        "babel-preset-env": "^1.7.0",
-        "babel-preset-react": "^6.24.1",
-        "babel-preset-stage-0": "^6.24.1",
         "clean-webpack-plugin": "^3.0.0",
         "css-loader": "^3.4.2",
         "eslint": "^6.8.0",
