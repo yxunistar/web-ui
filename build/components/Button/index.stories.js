@@ -1,13 +1,18 @@
 import React from "react";
 import Button from "Button";
+import { ThemeProvider } from "Theme";
 
 export default { title: "Button" };
 
 export var withText = function withText() {
     return React.createElement(
-        Button,
+        ThemeProvider,
         null,
-        "Hello Button"
+        React.createElement(
+            Button,
+            null,
+            "Hello Button"
+        )
     );
 };
 

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import "./style.sass";
+import ThemeConsumer from "../Theme/ThemeConsumer";
+import "./style";
 
 const TYPES = {
     PRIMARY: "primary",
@@ -12,20 +13,27 @@ const CUSTOM = "custom";
 
 const Button = props => {
     return (
-        <button
-            className={cx(
-                {
-                    "custom-button": props.type === CUSTOM,
-                    "unistar-button": props.type !== CUSTOM,
-                    [Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.STANDARD]: true,
-                },
-                props.className
-            )}
-            disabled={props.disabled}
-            onClick={props.onClick}
-        >
-            {props.children}
-        </button>
+        <ThemeConsumer>
+            {({ getThemeClass }) => {
+                return (
+                    <button
+                        className={cx(
+                            getThemeClass("button", {
+                                custom: props.type === CUSTOM,
+                            }),
+                            {
+                                [Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.STANDARD]: true,
+                            },
+                            props.className
+                        )}
+                        disabled={props.disabled}
+                        onClick={props.onClick}
+                    >
+                        {props.children}
+                    </button>
+                );
+            }}
+        </ThemeConsumer>
     );
 };
 

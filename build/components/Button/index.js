@@ -3,7 +3,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import "./style.sass";
+import ThemeConsumer from "../Theme/ThemeConsumer";
+import "./style";
 
 var TYPES = {
     PRIMARY: "primary",
@@ -14,16 +15,23 @@ var CUSTOM = "custom";
 
 var Button = function Button(props) {
     return React.createElement(
-        "button",
-        {
-            className: cx(_defineProperty({
-                "custom-button": props.type === CUSTOM,
-                "unistar-button": props.type !== CUSTOM
-            }, Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.STANDARD, true), props.className),
-            disabled: props.disabled,
-            onClick: props.onClick
-        },
-        props.children
+        ThemeConsumer,
+        null,
+        function (_ref) {
+            var getThemeClass = _ref.getThemeClass;
+
+            return React.createElement(
+                "button",
+                {
+                    className: cx(getThemeClass("button", {
+                        custom: props.type === CUSTOM
+                    }), _defineProperty({}, Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.STANDARD, true), props.className),
+                    disabled: props.disabled,
+                    onClick: props.onClick
+                },
+                props.children
+            );
+        }
     );
 };
 

@@ -11,11 +11,13 @@
     padding: 0 8px
     line-height: 1
 
+.unistar-button-early
     &.primary
         background-image: linear-gradient(to top, #f7f7f7 0%, #ffffff 100%)
         border-color: transparent
         box-shadow: 0px 2px 5px 0 rgba(6, 0, 0, 0.18)
         color: #585858
+        color: red
 
         &:hover
             background-image: none
@@ -37,6 +39,86 @@
             border-color: #7d7d7d
             box-shadow: none
             color: #b6b6b6
+            cursor: default
+
+    &.secondary
+        background-color: #52d344
+        border-color: #5ee030
+        box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.39)
+        color: #ffffff
+
+        &:hover
+            background-color: #4abb3e
+            border-color: #4abb3e
+            box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.39)
+            color: #ffffff
+
+        &:active
+            background-color: #44a939
+            border-color: #3e9a34
+            box-shadow: none
+            color: #ffffff
+
+        &[disabled]
+            background-color: transparent
+            border-color: #52d344
+            box-shadow: none
+            color: #52d344
+            cursor: default
+
+    &.important
+        background-color: #ff5243
+        border-color: #fc5c4f
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.28)
+        color: #ffffff
+
+        &:hover
+            background-color: #ff1400
+            border-color: #fc5d4f
+            box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.28)
+            color: #ffffff
+
+        &:active
+            background-color: #e91a08
+            border-color: #fb3624
+            box-shadow: none
+            color: #ffffff
+
+        &[disabled]
+            background-color: transparent
+            border-color: #ff5243
+            box-shadow: none
+            color: #ff5243
+            cursor: default
+
+.unistar-button-night
+    &.primary
+        background-image: linear-gradient(to top, #f7f7f7 0%, #ffffff 100%)
+        border-color: transparent
+        box-shadow: 0px 2px 5px 0 rgba(6, 0, 0, 0.18)
+        color: #585858
+        color: green
+
+        &:hover
+            background-image: none
+            background-color: #52c8f9
+            border-color: #35bff8
+            box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.18)
+            color: #ffffff
+
+        &:active
+            background-image: none
+            background-color: #36a9fb
+            border-color: #35bff8
+            box-shadow: none
+            color: #ffffff
+
+        &[disabled]
+            background-image: none
+            background-color: #36a9fb
+            border-color: #35bff8
+            box-shadow: none
+            color: #ffffff
             cursor: default
 
     &.secondary
