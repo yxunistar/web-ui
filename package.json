@@ -7,6 +7,7 @@
         "start": "start-storybook -p 6006",
         "build": "babel src -d build",
         "prepare": "yarn run build",
+        "build-ui": "npx webpack --config ./.storybook/webpack.config.product.js",
         "build-storybook": "build-storybook"
     },
     "files": [
