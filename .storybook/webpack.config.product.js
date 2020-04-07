@@ -5,11 +5,12 @@ const ROOT = path.resolve(__dirname, "../");
 const pkg = require("../package.json");
 
 module.exports = {
+    mode: "production",
     entry: "./src/index.js",
     output: {
         filename: "index.js",
         path: path.resolve(ROOT, "dist"),
-        libraryTarget: "umd",
+        libraryTarget: "commonjs2",
         library: pkg.name,
     },
     resolve: {
