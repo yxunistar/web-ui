@@ -7,19 +7,21 @@ class ThemeProvider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            theme: THEME.EARLY,
+            theme: localStorage.getItem("ui-theme") || THEME.EARLY,
         };
     }
 
     switchTheme = e => {
         e.preventDefault();
+        const theme = this.state.theme === THEME.EARLY ? THEME.NIGHT : THEME.EARLY;
+        localStorage.setItem("ui-theme", theme);
         this.setState({
-            theme: this.state.theme === THEME.EARLY ? THEME.NIGHT : THEME.EARLY,
+            theme,
         });
         return;
     };
 
-    getThemeClass = (suffixClass, { theme = this.state.theme, custom = false }) => {
+    getThemeClass = (suffixClass, { theme = this.state.theme, custom = false } = { theme: this.state.theme, custom: false }) => {
         if (!custom) {
             return cx({
                 [`unistar-${suffixClass}`]: true,

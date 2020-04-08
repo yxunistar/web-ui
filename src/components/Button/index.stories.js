@@ -8,7 +8,7 @@ export default { title: "General/Button" };
 export const View = () => (
     <ThemeProvider>
         <Wrapper>
-            <Block title="Basic">
+            <Block title="Default">
                 <Row>
                     <Column>
                         <Button type="primary">Primary (Default)</Button>
