@@ -22,7 +22,8 @@ const Button = props => {
                                 custom: props.type === CUSTOM,
                             }),
                             {
-                                [Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.STANDARD]: true,
+                                [Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.PRIMARY]:
+                                    props.type !== CUSTOM,
                                 active: props.active,
                             },
                             props.className
