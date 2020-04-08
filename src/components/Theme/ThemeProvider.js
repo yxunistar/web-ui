@@ -2,6 +2,7 @@ import React from "react";
 import ThemeContext from "./ThemeContext";
 import cx from "classnames";
 import { THEME } from "./constant";
+import "./style.sass";
 
 class ThemeProvider extends React.Component {
     constructor(props) {
@@ -42,14 +43,16 @@ class ThemeProvider extends React.Component {
                     getThemeClass: this.getThemeClass,
                 }}
             >
-                <div style={{ marginBottom: "20px" }}>
-                    <a href="#" onClick={this.switchTheme} style={{ textDecoration: "underline" }}>
-                        SwitchTheme
-                    </a>
-                    <br />
-                    Current Theme: {this.state.theme}
+                <div className="unistar-ui-root">
+                    <div className="switch-theme">
+                        <a href="#" onClick={this.switchTheme}>
+                            SwitchTheme
+                        </a>
+                        <br />
+                        Current Theme: {this.state.theme}
+                    </div>
+                    {this.props.children}
                 </div>
-                {this.props.children}
             </ThemeContext.Provider>
         );
     }
