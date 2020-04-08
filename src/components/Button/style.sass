@@ -1,7 +1,9 @@
+@import ~assets/style/mixins
+
 .unistar-button
-    //+display(flex)
-    //+justify-content(center)
-    //+align-items(center)
+    +display(flex)
+    +justify-content(center)
+    +align-items(center)
 
     min-width: 80px
     height: 28px
@@ -10,6 +12,8 @@
     border: solid 1px transparent
     padding: 0 8px
     line-height: 1
+    cursor: pointer
+    outline: none
 
 .unistar-button-early
     &.primary
@@ -17,7 +21,6 @@
         border-color: transparent
         box-shadow: 0px 2px 5px 0 rgba(6, 0, 0, 0.18)
         color: #585858
-        color: red
 
         &:hover
             background-image: none
@@ -36,7 +39,7 @@
         &[disabled]
             background-image: none
             background-color: transparent
-            border-color: #7d7d7d
+            border-color: rgba(#7d7d7d, .4)
             box-shadow: none
             color: #b6b6b6
             cursor: default
@@ -97,7 +100,6 @@
         border-color: transparent
         box-shadow: 0px 2px 5px 0 rgba(6, 0, 0, 0.18)
         color: #585858
-        color: green
 
         &:hover
             background-image: none
@@ -115,10 +117,10 @@
 
         &[disabled]
             background-image: none
-            background-color: #36a9fb
-            border-color: #35bff8
+            background-color: transparent
+            border-color: rgba(#7d7d7d, .4)
             box-shadow: none
-            color: #ffffff
+            color: #999999
             cursor: default
 
     &.secondary

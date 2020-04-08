@@ -11,10 +11,12 @@ class ThemeProvider extends React.Component {
         };
     }
 
-    switchTheme = () => {
+    switchTheme = e => {
+        e.preventDefault();
         this.setState({
             theme: this.state.theme === THEME.EARLY ? THEME.NIGHT : THEME.EARLY,
         });
+        return;
     };
 
     getThemeClass = (suffixClass, { theme = this.state.theme, custom = false }) => {
@@ -38,7 +40,13 @@ class ThemeProvider extends React.Component {
                     getThemeClass: this.getThemeClass,
                 }}
             >
-                <button onClick={this.switchTheme}>switch theme</button>
+                <div style={{ marginBottom: "20px" }}>
+                    <a href="#" onClick={this.switchTheme} style={{ textDecoration: "underline" }}>
+                        SwitchTheme
+                    </a>
+                    <br />
+                    Current Theme: {this.state.theme}
+                </div>
                 {this.props.children}
             </ThemeContext.Provider>
         );
