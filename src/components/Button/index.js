@@ -23,6 +23,7 @@ const Button = props => {
                             }),
                             {
                                 [Object.values(TYPES).indexOf(props.type) >= 0 ? props.type : TYPES.STANDARD]: true,
+                                active: props.active,
                             },
                             props.className
                         )}
@@ -40,6 +41,7 @@ const Button = props => {
 Button.propTypes = {
     className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     type: PropTypes.oneOf([CUSTOM, TYPES.PRIMARY, TYPES.SECONDARY, TYPES.IMPORTANT]),
+    active: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
 };
@@ -47,6 +49,7 @@ Button.propTypes = {
 Button.defaultProps = {
     className: "",
     type: TYPES.PRIMARY,
+    active: false,
     disabled: false,
     onClick: () => console.warn("onClick"),
 };

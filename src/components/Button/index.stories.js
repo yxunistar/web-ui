@@ -24,6 +24,30 @@ export const View = () => (
                     </Column>
                 </Row>
             </Block>
+            <Block title="Active">
+                <Row>
+                    <Column>
+                        <Button type="primary" active={true}>
+                            Primary (Default)
+                        </Button>
+                    </Column>
+                    <Column>
+                        <Button type="secondary" active={true}>
+                            Secondary
+                        </Button>
+                    </Column>
+                    <Column>
+                        <Button type="important" active={true}>
+                            Important
+                        </Button>
+                    </Column>
+                    <Column>
+                        <Button type="custom" active={true}>
+                            Custom
+                        </Button>
+                    </Column>
+                </Row>
+            </Block>
             <Block title="Disabled">
                 <Row>
                     <Column>
