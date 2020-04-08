@@ -1,4 +1,3 @@
 // eslint-disable-next-line filenames/match-exported
 export { default as Theme } from "components/Theme";
 export { default as Button } from "components/Button";
-export { default as Peggy } from "components/Peggy";
