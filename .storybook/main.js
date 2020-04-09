@@ -2,7 +2,6 @@ const custom = require("./webpack.config.development.js");
 
 module.exports = {
     stories: ["../src/**/*.stories.js"],
-    addons: ["@storybook/addon-actions", "@storybook/addon-links"],
     webpackFinal: (config, { configType }) => {
         if (configType === "DEVELOPMENT") {
             return {
