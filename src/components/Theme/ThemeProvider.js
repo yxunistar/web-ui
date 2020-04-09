@@ -1,25 +1,11 @@
 import React from "react";
 import ThemeContext from "./ThemeContext";
+import ThemeButton from "./ThemeButton";
 import cx from "classnames";
-import { THEME } from "./constant";
-import "./style.sass";
 
 class ThemeProvider extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            theme: localStorage.getItem("ui-theme") || THEME.EARLY,
-        };
-    }
-
-    switchTheme = e => {
-        e.preventDefault();
-        const theme = this.state.theme === THEME.EARLY ? THEME.NIGHT : THEME.EARLY;
-        localStorage.setItem("ui-theme", theme);
-        this.setState({
-            theme,
-        });
-        return;
+    state = {
+        theme: "",
     };
 
     getThemeClass = (suffixClass, { theme = this.state.theme, custom = false } = { theme: this.state.theme, custom: false }) => {
@@ -43,16 +29,8 @@ class ThemeProvider extends React.Component {
                     getThemeClass: this.getThemeClass,
                 }}
             >
-                <div className="unistar-ui-root">
-                    <div className="switch-theme">
-                        <a href="#" onClick={this.switchTheme}>
-                            SwitchTheme
-                        </a>
-                        <br />
-                        Current Theme: {this.state.theme}
-                    </div>
-                    {this.props.children}
-                </div>
+                <ThemeButton onChangeTheme={theme => this.setState({ theme })} />
+                <div className="unistar-ui-root">{this.props.children}</div>
             </ThemeContext.Provider>
         );
     }

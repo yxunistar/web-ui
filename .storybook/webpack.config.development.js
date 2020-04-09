@@ -6,7 +6,7 @@ const ROOT = path.resolve(__dirname, "../");
 module.exports = {
     resolve: {
         extensions: [".js", ".jsx", ".json", ".css", ".sass"],
-        modules: ["node_modules", path.resolve(ROOT, "src"), path.resolve(ROOT, "src/components")],
+        modules: ["node_modules", path.resolve(ROOT, "src"), path.resolve(ROOT, "src/components"), path.resolve(ROOT, "src/assets")],
     },
     module: {
         rules: [

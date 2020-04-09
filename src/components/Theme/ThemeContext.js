@@ -1,6 +1,6 @@
 import React from "react";
 import cx from "classnames";
-import { THEME } from "./constant";
+import { THEME } from "./ThemeButton/constant";
 
 const ThemeContext = React.createContext({
     getThemeClass: (suffixClass, theme = THEME.EARLY) => {
