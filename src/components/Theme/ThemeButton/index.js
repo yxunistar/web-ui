@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 import { THEME } from "./constant";
 import "./style.sass";
 
@@ -16,11 +17,13 @@ const ThemeButton = props => {
     useEffect(() => props.onChangeTheme(theme), []);
     return (
         <div className="switch-theme">
-            <a href="#" onClick={switchTheme}>
-                SwitchTheme
-            </a>
-            <br />
-            Current Theme: {theme}
+            <a
+                href="#"
+                className={cx({
+                    open: theme === THEME.NIGHT,
+                })}
+                onClick={switchTheme}
+            />
         </div>
     );
 };

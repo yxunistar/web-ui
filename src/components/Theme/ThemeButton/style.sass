@@ -2,8 +2,35 @@
     margin-bottom: 20px
 
     a
+        display: block
         text-decoration: underline
         color: #5e5e5e
+        width: 55px
+        height: 30px
+        background: #ccc
+        border-radius: 20px
+        padding: 4px
+        box-sizing: border-box
+        transition: flex-direction .4s
+        position: relative
+        transition: background .3s
 
-        &:hover
-            color: #333
+        &:before
+            content: ""
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            margin: 4px
+            width: 22px
+            height: 22px
+            border-radius: 100%
+            background: #fff
+            box-shadow: 1px 0px 5px rgba(#000, .15)
+            transition: left .3s
+
+        &.open
+            background: #4a4361
+
+            &:before
+                left: calc(100% - 30px)
