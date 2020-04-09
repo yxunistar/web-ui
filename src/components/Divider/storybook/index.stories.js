@@ -1,16 +1,13 @@
 import React from "react";
-import Divider from "Divider";
 import { ThemeProvider } from "Theme";
-import { Block, Row } from "layout";
+import { Wrapper } from "layout";
+import Document from "./Document";
+import Examples from "./Examples";
 
 export default { title: "Other/Divider" };
 
 export const View = () => (
     <ThemeProvider>
-        <Block title="Default">
-            <Row>
-                <Divider />
-            </Row>
-        </Block>
+        <Wrapper title="Divider" document={Document} examples={Examples} />
     </ThemeProvider>
 );

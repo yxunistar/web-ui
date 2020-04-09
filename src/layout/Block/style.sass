@@ -1,5 +1,6 @@
-.unistar-ui-block
+@import ~styles/variables
 
+.unistar-ui-block
     display: flex
     flex-direction: column
     margin-bottom: 40px
@@ -11,16 +12,18 @@
 
 .unistar-ui-block-early
     background: url(~assets/images/bg-early.jpg)
-    color: #000
+    color: $font-color-early
     border: 1px solid #dbdbdb
 
     h2
+        color: #000
         border-bottom: 1px solid rgba(#000, .13)
 
 .unistar-ui-block-night
     background: linear-gradient(#051035, #4a4361)
-    color: #fff
+    color: $font-color-night
     border: 1px solid #dbdbdb
 
     h2
+        color: #fff
         border-bottom: 1px solid rgba(#fff, .25)
