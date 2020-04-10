@@ -1,0 +1,29 @@
+@import ~styles/mixins
+@import ~styles/variables
+
+// list
+.unistar-list
+    margin-bottom: 12px
+    margin-top: 0
+    padding: 0
+    line-height: 1
+
+.unistar-list-early
+    color: $font-color-early
+
+.unistar-list-night
+    color: $font-color-night
+
+// ordered
+.unistar-list.ordered
+    .unistar-list-item
+        list-style: decimal inside none
+
+// exclamation
+.unistar-list.exclamation
+    .unistar-list-item
+        +display(flex)
+        +align-items(center)
+
+        .unistar-icon-exclamation
+            margin-right: 4px

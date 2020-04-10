@@ -5,7 +5,7 @@ import Button from "Button";
 const Examples = () => {
     return (
         <>
-            <Block title="Default">
+            <Block title="Type">
                 <Row>
                     <Column>
                         <Button type="primary">Primary (Default)</Button>
