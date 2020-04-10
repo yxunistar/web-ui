@@ -17,10 +17,8 @@ const Block = props => {
                     showDefaultProps: false,
                     maxInlineAttributesLineLength: 200,
                 })
-                    .replace(/(<(\/?)Row>|<(\/?)Column>)/g, "")
-                    .replace(/\s+\n(?=\s+\n)/g, "")
-                    .replace(/(^\s+\n|\s+\n$)/g, "")
-                    .replace(/^ {4}/gm, "");
+                    .replace(/(<Row>|<Column>)/g, "<div>")
+                    .replace(/(<\/Row>|<\/Column>)/g, "</div>");
                 return (
                     <div className={cx(getThemeClass("ui-block"))}>
                         <div className="main">
