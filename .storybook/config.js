@@ -1,1 +1,0 @@
-import "styles/storybook-global";
