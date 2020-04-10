@@ -4,11 +4,13 @@
     display: flex
     flex-direction: column
     margin-bottom: 40px
-    h2
+
+    h3
         display: flex
         align-items: center
-        font-weight: 200
+        font-weight: 400
         margin-top: 0
+        padding-bottom: 3px
 
         > span
             font-size: 10px
@@ -30,6 +32,10 @@
     > .main, > .code
         padding: 40px
 
+    > .main
+        background-size: cover
+        background-position: center
+
     > .code
         display: none
 
@@ -43,20 +49,20 @@
     color: $font-color-early
     border: 1px solid #dbdbdb
 
-    h2
+    h3
         color: #000
         border-bottom: 1px solid rgba(#000, .13)
 
     > .main
-        background: url(~assets/images/bg-early.jpg)
+        background-image: url(~assets/images/bg-early.jpg)
 
 .unistar-ui-block-night
     color: $font-color-night
     border: 1px solid #dbdbdb
 
-    h2
+    h3
         color: #fff
         border-bottom: 1px solid rgba(#fff, .25)
 
     > .main
-        background: linear-gradient(#051035, #4a4361)
+        background-image: linear-gradient(#051035, #4a4361)

@@ -22,7 +22,7 @@ const Block = props => {
                 return (
                     <div className={cx(getThemeClass("ui-block"))}>
                         <div className="main">
-                            <h2>
+                            <h3>
                                 {props.title}
                                 <span
                                     className={cx({
@@ -34,7 +34,7 @@ const Block = props => {
                                     <span className="code-status">{`/`}</span>
                                     <span>{`>`}</span>
                                 </span>
-                            </h2>
+                            </h3>
                             {props.description && <p>{props.description}</p>}
                             {props.children}
                         </div>

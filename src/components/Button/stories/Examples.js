@@ -25,7 +25,7 @@ const Examples = () => {
                 <Row>
                     <Column>
                         <Button type="primary" active={true}>
-                            Primary (Default)
+                            Primary(Default)
                         </Button>
                     </Column>
                     <Column>
