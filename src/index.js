@@ -5,3 +5,4 @@ export { default as Divider } from "components/Divider";
 export { default as Highlight } from "components/Highlight";
 export { default as Icon } from "components/Icon";
 export { default as List } from "components/List";
+export { default as Form } from "components/Form";
