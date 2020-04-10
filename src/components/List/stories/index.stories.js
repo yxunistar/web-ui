@@ -4,7 +4,7 @@ import { Wrapper } from "layout";
 import Document from "./Document";
 import Examples from "./Examples";
 
-export default { title: "Data Display/List" };
+export default { title: "Data Display|List" };
 
 export const View = () => (
     <ThemeProvider>

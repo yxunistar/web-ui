@@ -4,7 +4,7 @@ import { Wrapper } from "layout";
 import Document from "./Document";
 import Examples from "./Examples";
 
-export default { title: "Other/Highlight" };
+export default { title: "Other|Highlight" };
 
 export const View = () => (
     <ThemeProvider>
