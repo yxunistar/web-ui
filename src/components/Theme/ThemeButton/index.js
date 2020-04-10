@@ -14,7 +14,7 @@ const ThemeButton = props => {
         props.onChangeTheme(newTheme);
         return;
     };
-    useEffect(() => props.onChangeTheme(theme), []);
+    useEffect(() => props.onChangeTheme(theme), [theme]);
     return (
         <div className="switch-theme">
             <a

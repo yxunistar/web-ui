@@ -17,7 +17,10 @@ module.exports = {
                 loader: "babel-loader",
                 options: {
                     presets: ["@babel/preset-env", "@babel/preset-react"],
-                    plugins: ["@babel/plugin-proposal-class-properties", "@babel/plugin-syntax-dynamic-import"],
+                    plugins: [
+                        "@babel/plugin-proposal-class-properties",
+                        "@babel/plugin-syntax-dynamic-import"
+                    ],
                     babelrc: false,
                     cacheDirectory: true,
                 },
@@ -33,6 +36,10 @@ module.exports = {
                     failOnWarning: false,
                     failOnError: true,
                 },
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.(sass|scss)$/,

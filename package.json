@@ -26,6 +26,8 @@
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
+        "react-element-to-jsx-string": "^14.3.1",
+        "react-syntax-highlighter": "^12.2.1",
         "regenerator-runtime": "^0.13.3"
     },
     "devDependencies": {

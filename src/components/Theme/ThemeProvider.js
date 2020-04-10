@@ -22,6 +22,8 @@ class ThemeProvider extends React.Component {
         }
     };
 
+    handleChangeTheme = theme => this.setState({ theme });
+
     render() {
         return (
             <ThemeContext.Provider
@@ -29,7 +31,7 @@ class ThemeProvider extends React.Component {
                     getThemeClass: this.getThemeClass,
                 }}
             >
-                <ThemeButton onChangeTheme={theme => this.setState({ theme })} />
+                <ThemeButton onChangeTheme={this.handleChangeTheme} />
                 <div className="unistar-ui-root">{this.props.children}</div>
             </ThemeContext.Provider>
         );
