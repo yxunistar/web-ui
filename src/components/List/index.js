@@ -6,6 +6,7 @@ import cx from "classnames";
 import "./style.sass";
 
 const TYPES = {
+    DEFAULT: "default",
     ORDERED: "ordered",
     EXCLAMATION: "exclamation",
 };
@@ -16,6 +17,8 @@ class List extends React.PureComponent {
         return (
             <ThemeConsumer>
                 {({ getThemeClass }) => {
+                    if (type === TYPES.DEFAULT)
+                        return <ul className={cx(getThemeClass("list"), TYPES.DEFAULT, this.props.className)}>{children}</ul>;
                     if (type === TYPES.ORDERED)
                         return <ol className={cx(getThemeClass("list"), TYPES.ORDERED, this.props.className)}>{children}</ol>;
                     if (type === TYPES.EXCLAMATION)
@@ -37,7 +40,7 @@ List.propTypes = {
 
 List.defaultProps = {
     className: "",
-    type: TYPES.ORDERED,
+    type: TYPES.DEFAULT,
 };
 
 List.Item = Item;
