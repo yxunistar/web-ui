@@ -1,0 +1,96 @@
+// frame
+.unistar-radio
+    display: flex
+    align-items: center
+    height: 28px
+    cursor: pointer
+
+    > span
+        display: flex
+        align-items: center
+        height: 100%
+
+    .radio
+        margin: 0
+        padding-right: 4px
+
+        > input
+            display: none
+
+        > .radio-inner
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 100%
+            transition: all .3s
+            color: #a8a8a8
+            border: 1px solid currentColor
+            margin: 0
+
+            &:after
+                content: ""
+                display: block
+                border-radius: 100%
+                background: transparent
+                transition: all .3s
+
+    &.large .radio > .radio-inner
+        width: 28px
+        height: 28px
+
+        &:after
+            width: 12px
+            height: 12px
+
+    &.small .radio > .radio-inner
+        width: 19px
+        height: 19px
+
+        &:after
+            width: 7px
+            height: 7px
+
+    &:not(.disabled):hover .radio > .radio-inner
+        color: #52c8f9
+
+    &:not(.disabled):active,
+    &:not(.disabled).checked
+        .radio > .radio-inner
+            color: #66b9f5
+
+            &:after
+                background: #66b9f5
+
+    &.disabled
+        cursor: default
+
+        .radio > .radio-inner
+            background-color: currentColor
+
+// early
+.unistar-radio-early
+    color: #5e5e5e
+
+    &.disabled
+        color: rgba(94, 94, 94, 0.35)
+
+        .radio > .radio-inner
+            color: rgba(#5e5e5e, 0.1)
+
+        &.checked
+            .radio > .radio-inner:after
+                background: #c1c6cd
+
+// night
+.unistar-radio-night
+    color: #e2e2e2
+
+    &.disabled
+        color: rgba(226, 226, 226, 0.35)
+
+        .radio > .radio-inner
+            color: rgba(#ffffff, 0.1)
+
+        &.checked
+            .radio > .radio-inner:after
+                background: rgba(#ffffff, 0.2)

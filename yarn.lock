@@ -3243,6 +3243,14 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
+demo-source-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/demo-source-loader/-/demo-source-loader-1.0.0.tgz#33bacec6829aece7a339fd3ab9726f58c96e3f76"
+  integrity sha512-J/zctqxxXT8XOMNoV1DaSdAMhS6KT9qSmd27aDhsvHXVRjGI8nkvs3ORD3LnMKfEHvU9DY7TgKGfD22GGi2fqQ==
+  dependencies:
+    js-string-escape "^1.0.1"
+    loader-utils "^1.2.3"
+
 depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
@@ -5107,6 +5115,11 @@ jest-worker@^25.1.0:
 js-base64@^2.1.8:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.2.tgz#313b6274dda718f714d00b3330bbae6e38e90209"
+
+js-string-escape@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/js-string-escape/-/js-string-escape-1.0.1.tgz#e2625badbc0d67c7533e9edc1068c587ae4137ef"
+  integrity sha1-4mJbrbwNZ8dTPp7cEGjFh65BN+8=
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

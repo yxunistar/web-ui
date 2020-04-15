@@ -146,7 +146,8 @@
                 "conf/**/*.js",
                 "packages/**/*",
                 "*.test.js",
-                "*.test.jsx"
+                "*.test.jsx",
+                "*.demo.js"
             ],
             "rules": {
                 "filenames/match-regex": "off",

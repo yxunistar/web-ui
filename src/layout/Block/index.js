@@ -13,12 +13,19 @@ const Block = props => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => {
-                const code = reactElementToJSXString(props.children, {
-                    showDefaultProps: false,
-                    maxInlineAttributesLineLength: 200,
-                })
-                    .replace(/(<Row>|<Column>)/g, "<div>")
-                    .replace(/(<\/Row>|<\/Column>)/g, "</div>");
+                let code = "";
+                if (props.demo) {
+                    console.warn(props.demo.__source__);
+                    code = props.demo.__source__;
+                } else {
+                    code = reactElementToJSXString(props.children, {
+                        showDefaultProps: false,
+                        maxInlineAttributesLineLength: 200,
+                    })
+                        .replace(/(<Row>|<Column>)/g, "<div>")
+                        .replace(/(<\/Row>|<\/Column>)/g, "</div>");
+                }
+
                 return (
                     <div className={cx(getThemeClass("ui-block"))}>
                         <div className="main">

@@ -52,6 +52,27 @@ module.exports = {
                     limit: 8192,
                 },
             },
+            {
+                test: /\.demo.js$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "demo-source-loader"
+                    },
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env", "@babel/preset-react"],
+                            plugins: [
+                                "@babel/plugin-proposal-class-properties",
+                                "@babel/plugin-syntax-dynamic-import"
+                            ],
+                            babelrc: false,
+                            cacheDirectory: true,
+                        },
+                    }
+                ]
+            }
         ],
     },
 };
