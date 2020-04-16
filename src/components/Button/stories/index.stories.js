@@ -8,7 +8,7 @@ import LinkDemo from "./LinkDemo";
 const document = () => (
     <>
         <p>
-            按鈕元件有三種類型（primary, secondary, important,
+            按鈕元件有四種型態（primary, secondary, important,
             link），另外一種客製化類型（custom）會將所有樣式移除，但保留按鈕行為。
         </p>
     </>
