@@ -20,7 +20,7 @@ const examples = () => (
         <Block title="Active" demo={ActiveDemo} />
         <Block title="Disabled" description={`link 型態沒有 disabled 的樣式，目前無此需求`} demo={DisabledDemo} />
         <Block
-            title="Link"
+            title="Link with href"
             description={`link 型態若帶上 href，會轉為 a 超連結型態，此時可帶入 target 屬性，預設為 _blank`}
             demo={LinkDemo}
         />
