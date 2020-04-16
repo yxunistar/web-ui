@@ -3,10 +3,14 @@ import { Wrapper, Block } from "layout";
 import TypeDemo from "./TypeDemo";
 import ActiveDemo from "./ActiveDemo";
 import DisabledDemo from "./DisabledDemo";
+import LinkDemo from "./LinkDemo";
 
 const document = () => (
     <>
-        <p>按鈕元件有三種類型（primary, secondary, important），另外一種客製化類型會將所有樣式移除，但保留按鈕行為。</p>
+        <p>
+            按鈕元件有三種類型（primary, secondary, important,
+            link），另外一種客製化類型（custom）會將所有樣式移除，但保留按鈕行為。
+        </p>
     </>
 );
 
@@ -14,7 +18,12 @@ const examples = () => (
     <>
         <Block title="Type" demo={TypeDemo} />
         <Block title="Active" demo={ActiveDemo} />
-        <Block title="Disabled" demo={DisabledDemo} />
+        <Block title="Disabled" description={`link 型態沒有 disabled 的樣式，目前無此需求`} demo={DisabledDemo} />
+        <Block
+            title="Link"
+            description={`link 型態若帶上 href，會轉為 a 超連結型態，此時可帶入 target 屬性，預設為 _blank`}
+            demo={LinkDemo}
+        />
     </>
 );
 

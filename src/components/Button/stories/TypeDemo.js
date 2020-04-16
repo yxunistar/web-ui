@@ -17,6 +17,9 @@ const TypeDemo = () => {
             <Column>
                 <Button type="custom">Custom</Button>
             </Column>
+            <Column>
+                <Button type="link">Link</Button>
+            </Column>
         </Row>
     );
 };

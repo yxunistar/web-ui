@@ -8,6 +8,7 @@ const TYPES = {
     PRIMARY: "primary",
     SECONDARY: "secondary",
     IMPORTANT: "important",
+    LINK: "link",
 };
 const CUSTOM = "custom";
 
@@ -15,6 +16,26 @@ const Button = props => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => {
+                if (props.type === TYPES.LINK && props.href) {
+                    return (
+                        <a
+                            className={cx(
+                                getThemeClass("button"),
+                                {
+                                    link: true,
+                                    active: props.active,
+                                },
+                                props.className
+                            )}
+                            href={props.href}
+                            target={props.target || "_blank"}
+                            disabled={props.disabled}
+                            onClick={props.onClick}
+                        >
+                            {props.children}
+                        </a>
+                    );
+                }
                 return (
                     <button
                         className={cx(
@@ -44,6 +65,8 @@ Button.propTypes = {
     type: PropTypes.oneOf([CUSTOM, TYPES.PRIMARY, TYPES.SECONDARY, TYPES.IMPORTANT]),
     active: PropTypes.bool,
     disabled: PropTypes.bool,
+    href: PropTypes.string,
+    target: PropTypes.string,
     onClick: PropTypes.func,
 };
 

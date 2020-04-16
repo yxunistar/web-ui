@@ -25,6 +25,11 @@ const ActiveDemo = () => {
                     Custom
                 </Button>
             </Column>
+            <Column>
+                <Button type="link" active>
+                    Link
+                </Button>
+            </Column>
         </Row>
     );
 };

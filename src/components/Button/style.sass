@@ -12,6 +12,13 @@
     cursor: pointer
     outline: none
 
+a.unistar-button
+    min-width: auto
+    height: auto
+    padding: 0
+    display: inline
+    font-size: 12px
+
 .custom-button
     cursor: pointer
 
@@ -97,6 +104,17 @@
             color: #ff5243
             cursor: default
 
+    &.link
+        background-color: transparent
+        border-color: transparent
+        color: #36a9fb
+
+        &:hover
+            color: #52c8f9
+
+        &:active, &.active, &.active:hover
+            color: #36a9fb
+
 .unistar-button-night
     &.primary
         background-image: linear-gradient(to top, #f7f7f7 0%, #ffffff 100%)
@@ -175,3 +193,14 @@
             box-shadow: none
             color: #ff5243
             cursor: default
+
+    &.link
+        background-color: transparent
+        border-color: transparent
+        color: #36a9fb
+
+        &:hover
+            color: #52c8f9
+
+        &:active, &.active, &.active:hover
+            color: #36a9fb
