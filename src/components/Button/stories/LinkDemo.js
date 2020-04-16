@@ -1,19 +1,21 @@
 import React from "react";
 import Button from "Button";
-import { Row } from "layout";
+import { Row, Column } from "layout";
 
 const LinkDemo = () => {
     return (
-        <>
-            <Row>
-                <Button type="link">Link</Button>
-            </Row>
-            <Row>
+        <Row>
+            <Column>
+                <Button type="link" href>
+                    Link with href
+                </Button>
+            </Column>
+            <Column>
                 <Button type="link" href={"http://www.google.com"}>
                     Link with href
                 </Button>
-            </Row>
-        </>
+            </Column>
+        </Row>
     );
 };
 

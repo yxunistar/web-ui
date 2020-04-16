@@ -16,7 +16,7 @@ const Button = props => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => {
-                if (props.type === TYPES.LINK && props.href) {
+                if (props.type === TYPES.LINK && typeof props.href !== "undefined") {
                     return (
                         <a
                             className={cx(
