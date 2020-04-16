@@ -5,7 +5,6 @@ import cx from "classnames";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import { default as style } from "react-syntax-highlighter/dist/esm/styles/prism/coy";
-import reactElementToJSXString from "react-element-to-jsx-string";
 SyntaxHighlighter.registerLanguage("jsx", jsx);
 
 const Block = props => {
@@ -13,19 +12,6 @@ const Block = props => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => {
-                let code = "";
-                if (props.demo) {
-                    console.warn(props.demo.__source__);
-                    code = props.demo.__source__;
-                } else {
-                    code = reactElementToJSXString(props.children, {
-                        showDefaultProps: false,
-                        maxInlineAttributesLineLength: 200,
-                    })
-                        .replace(/(<Row>|<Column>)/g, "<div>")
-                        .replace(/(<\/Row>|<\/Column>)/g, "</div>");
-                }
-
                 return (
                     <div className={cx(getThemeClass("ui-block"))}>
                         <div className="main">
@@ -51,7 +37,7 @@ const Block = props => {
                             })}
                         >
                             <SyntaxHighlighter language="jsx" style={style}>
-                                {code}
+                                {props.demo.__source__}
                             </SyntaxHighlighter>
                         </div>
                     </div>
