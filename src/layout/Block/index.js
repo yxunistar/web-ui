@@ -29,6 +29,7 @@ const Block = props => {
                                 </span>
                             </h3>
                             {props.description && <p>{props.description}</p>}
+                            <hr />
                             {React.createElement(props.demo)}
                         </div>
                         <div

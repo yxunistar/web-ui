@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Radio from "Radio/index";
 
 const DefaultDemo = () => {
+    const [value, setValue] = useState("Peggy");
     return (
-        <Radio.Group>
-            <Radio value="Girl" key="Girl" defaultChecked>
-                Girl
+        <Radio.Group value={value} onChange={e => setValue(e.target.value)}>
+            <Radio value="Peggy" key="Peggy">
+                Peggy
             </Radio>
-            <Radio value="Boy" key="Boy">
-                Boy
+            <Radio value="Wade" key="Wade">
+                Wade
             </Radio>
         </Radio.Group>
     );
