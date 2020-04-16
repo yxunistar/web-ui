@@ -43,7 +43,7 @@ const Block = props => {
                                 </span>
                             </h3>
                             {props.description && <p>{props.description}</p>}
-                            {props.children}
+                            {React.createElement(props.demo)}
                         </div>
                         <div
                             className={cx("code", {

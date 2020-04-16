@@ -1,8 +1,18 @@
 import React from "react";
-import { Wrapper } from "layout";
-import Document from "./Document";
-import Examples from "./Examples";
+import { Wrapper, Block } from "layout";
+import DefaultDemo from "./DefaultDemo";
+
+const document = () => (
+    <>
+        <p>SVG常用圖示。</p>
+    </>
+);
+
+const examples = () => (
+    <>
+        <Block title="Default" demo={DefaultDemo} />
+    </>
+);
 
 export default { title: "General|Icon" };
-
-export const View = () => <Wrapper title="Icon" document={Document} examples={Examples} />;
+export const View = () => <Wrapper title="Icon" document={document} examples={examples} />;

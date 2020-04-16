@@ -53,7 +53,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.demo.js$/,
+                test: /.+Demo.js$/,
                 exclude: /node_modules/,
                 use: [
                     {
