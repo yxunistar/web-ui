@@ -11,6 +11,10 @@ const TYPES = {
     EXCLAMATION: "exclamation",
 };
 
+const COLORS = {
+    RED: "red",
+};
+
 class List extends React.PureComponent {
     render() {
         const { type, children } = this.props;
@@ -18,12 +22,20 @@ class List extends React.PureComponent {
             <ThemeConsumer>
                 {({ getThemeClass }) => {
                     if (type === TYPES.DEFAULT)
-                        return <ul className={cx(getThemeClass("list"), TYPES.DEFAULT, this.props.className)}>{children}</ul>;
+                        return (
+                            <ul className={cx(getThemeClass("list"), TYPES.DEFAULT, this.props.color, this.props.className)}>
+                                {children}
+                            </ul>
+                        );
                     if (type === TYPES.ORDERED)
-                        return <ol className={cx(getThemeClass("list"), TYPES.ORDERED, this.props.className)}>{children}</ol>;
+                        return (
+                            <ol className={cx(getThemeClass("list"), TYPES.ORDERED, this.props.color, this.props.className)}>
+                                {children}
+                            </ol>
+                        );
                     if (type === TYPES.EXCLAMATION)
                         return (
-                            <ul className={cx(getThemeClass("list"), TYPES.EXCLAMATION, this.props.className)}>
+                            <ul className={cx(getThemeClass("list"), TYPES.EXCLAMATION, this.props.color, this.props.className)}>
                                 {React.Children.map(children, child => React.cloneElement(child, { type }))}
                             </ul>
                         );
@@ -36,6 +48,7 @@ class List extends React.PureComponent {
 List.propTypes = {
     className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     type: PropTypes.oneOf(Object.values(TYPES)),
+    color: PropTypes.oneOf(Object.values(COLORS)),
 };
 
 List.defaultProps = {

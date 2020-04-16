@@ -6,7 +6,7 @@ import ExclamationDemo from "./ExclamationDemo";
 
 const document = () => (
     <>
-        <p>列表元件有兩種類型（ordered, exclamation），佈局：行高為1，項目間距為12。</p>
+        <p>列表元件有兩種類型（default, ordered, exclamation），佈局：行高為1，項目間距為12。</p>
     </>
 );
 

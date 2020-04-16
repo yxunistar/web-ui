@@ -7,6 +7,12 @@
     padding: 0
     line-height: 1
 
+    &.red
+        color: #ff5243
+
+        .unistar-list-item
+            color: #ff5243
+
 .unistar-list-early
     color: $font-color-early
 
@@ -25,6 +31,9 @@
 
 // exclamation
 .unistar-list.exclamation
+    &.red .unistar-icon-exclamation
+        fill: #ff5243
+
     .unistar-list-item
         display: flex
         align-items: center

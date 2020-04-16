@@ -3,21 +3,21 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import "./style.sass";
 
-const TYPE = {
+const COLOR = {
     RED: "red",
     GREEN: "green",
 };
 
 const Highlight = props => {
-    return <span className={cx("unistar-highlight", props.type)}>{props.children}</span>;
+    return <span className={cx("unistar-highlight", props.color)}>{props.children}</span>;
 };
 
 Highlight.propTypes = {
-    type: PropTypes.string,
+    color: PropTypes.string,
 };
 
 Highlight.defaultProps = {
-    type: TYPE.RED,
+    color: COLOR.RED,
 };
 
 export default Highlight;
