@@ -29,7 +29,7 @@ class Radio extends React.PureComponent {
                     }
                     return (
                         <label
-                            className={cx(getThemeClass("radio", radioProps.theme), this.props.className, {
+                            className={cx(getThemeClass("radio", { theme: radioProps.theme }), this.props.className, {
                                 [radioProps.size]: true,
                                 checked: radioProps.checked,
                                 disabled: radioProps.disabled,

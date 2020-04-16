@@ -66,7 +66,14 @@ class Group extends React.PureComponent {
                 <ThemeConsumer>
                     {({ getThemeClass }) => {
                         return (
-                            <div className={cx(getThemeClass("radio-group", this.props.theme), this.props.className)}>
+                            <div
+                                className={cx(
+                                    getThemeClass("radio-group", {
+                                        theme: this.props.theme,
+                                    }),
+                                    this.props.className
+                                )}
+                            >
                                 {children}
                             </div>
                         );

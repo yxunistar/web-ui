@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Radio from "Radio/index";
 
-const DefaultDemo = () => {
+const RadioGroupDemo = () => {
     const [value, setValue] = useState("Peggy");
     return (
         <Radio.Group value={value} onChange={e => setValue(e.target.value)}>
@@ -15,4 +15,4 @@ const DefaultDemo = () => {
     );
 };
 
-export default DefaultDemo;
+export default RadioGroupDemo;
