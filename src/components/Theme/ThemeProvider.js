@@ -5,7 +5,7 @@ import cx from "classnames";
 
 class ThemeProvider extends React.Component {
     state = {
-        theme: null,
+        theme: localStorage.getItem("ui-theme"),
     };
 
     getThemeClass = (suffixClass, { theme = this.state.theme, custom = false } = { theme: this.state.theme, custom: false }) => {

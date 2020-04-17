@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { THEME } from "./constant";
 import "./style.sass";
 
 const ThemeButton = props => {
+    console.warn(localStorage.getItem("ui-theme"));
     const [theme, setTheme] = useState(localStorage.getItem("ui-theme") || THEME.EARLY);
     const switchTheme = e => {
         e.preventDefault();
@@ -14,7 +15,6 @@ const ThemeButton = props => {
         props.onChangeTheme(newTheme);
         return;
     };
-    useEffect(() => props.onChangeTheme(theme), [theme]);
     return (
         <div className="switch-theme">
             <a
