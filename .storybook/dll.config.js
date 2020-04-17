@@ -8,7 +8,6 @@ module.exports = {
         "lib": [
             "react",
             "react-dom",
-            "react-datepicker",
         ],
     },
     output: {
