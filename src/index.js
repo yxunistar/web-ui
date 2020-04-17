@@ -1,6 +1,6 @@
 // eslint-disable-next-line filenames/match-exported
 export { default as Button } from "components/Button";
-// export { default as DatePicker } from "components/DatePicker";
+export { default as DatePicker } from "components/DatePicker";
 export { default as Divider } from "components/Divider";
 export { default as Form } from "components/Form";
 export { default as Highlight } from "components/Highlight";

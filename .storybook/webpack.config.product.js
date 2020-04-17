@@ -1,5 +1,5 @@
 "use strict";
-
+const webpack = require("webpack");
 const path = require("path");
 const ROOT = path.resolve(__dirname, "../");
 const pkg = require("../package.json");
@@ -60,6 +60,12 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new webpack.DllReferencePlugin({
+            context: path.join(ROOT, "dist"),
+            manifest: require("../dist/lib.json")
+        }),
+    ],
     externals: {
         react: {
             commonjs: "react",
@@ -78,6 +84,12 @@ module.exports = {
             commonjs2: "classnames",
             amd: "classnames",
             root: "classNames"
+        },
+        "moment": {
+            commonjs: "moment",
+            commonjs2: "moment",
+            amd: "moment",
+            root: "moment"
         },
     },
 };

@@ -1,13 +1,15 @@
-import Dayjs from "dayjs";
+import Moment from "moment";
 
 export default class Dater {
     static format(date, { format, zone }) {
         let time = null;
 
         if (date) {
-            time = Dayjs(date);
+            time = Moment(date);
         } else {
-            time = Dayjs().utcOffset(0);
+            time = Moment().utcOffset(0);
+            time.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
+            time.toISOString();
         }
 
         if (zone) {

@@ -6,7 +6,7 @@ import ThemeConsumer from "Theme/ThemeConsumer";
 import RangePicker from "./RangePicker";
 import RangePickerFilter from "./RangePickerFilter";
 
-import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/src/stylesheets/datepicker.scss";
 import "./style.sass";
 
 const DatePicker = props => (

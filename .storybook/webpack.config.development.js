@@ -27,7 +27,7 @@ module.exports = {
             },
             {
                 test: /\.(js|jsx)$/,
-                include: [path.resolve(ROOT, "src")],
+                include: [path.resolve(ROOT, "src"), path.resolve(ROOT, ".storybook")],
                 exclude: /node_modules/,
                 loader: "eslint-loader",
                 enforce: "pre",
