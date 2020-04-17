@@ -61,18 +61,23 @@ module.exports = {
         ],
     },
     externals: {
-        // Don't bundle react or react-dom
         react: {
             commonjs: "react",
             commonjs2: "react",
-            amd: "React",
+            amd: "react",
             root: "React",
         },
         "react-dom": {
             commonjs: "react-dom",
             commonjs2: "react-dom",
-            amd: "ReactDOM",
+            amd: "react-dom",
             root: "ReactDOM",
+        },
+        "classnames": {
+            commonjs: "classnames",
+            commonjs2: "classnames",
+            amd: "classnames",
+            root: "classNames"
         },
     },
 };
