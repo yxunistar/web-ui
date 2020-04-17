@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper, Block } from "layout";
-import TypeDemo from "./TypeDemo";
+import ColorDemo from "./ColorDemo";
 
 const document = () => (
     <>
@@ -10,7 +10,7 @@ const document = () => (
 
 const examples = () => (
     <>
-        <Block title="Type" demo={TypeDemo} />
+        <Block title="Color" description={`顏色：red, green，預設 red`} demo={ColorDemo} />
     </>
 );
 

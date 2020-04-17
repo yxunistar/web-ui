@@ -6,16 +6,23 @@ import MixedLayoutDemo from "./MixedLayoutDemo";
 
 const document = () => (
     <>
-        <p>包含表單佈局、元件名稱，未來要加入驗證機制，表單垂直之間的間距為14px，水平之間的間距為10px。</p>
-        <p>白色與綠色背景是示意區塊範圍，實際使用不會存在。</p>
+        <p>包含表單佈局、元件名稱，未來要加入驗證機制。</p>
     </>
 );
 
 const examples = () => (
     <>
-        <Block title="Horizontal Layout" demo={HorizontalLayoutDemo} />
-        <Block title="Vertical Layout" demo={VerticalLayoutDemo} />
-        <Block title="Mixed Layout" demo={MixedLayoutDemo} />
+        <Block
+            title="Horizontal Layout"
+            description={`Form.Item 水平間的間距為10px，白色與綠色背景是示意區塊範圍，實際使用不會存在。`}
+            demo={HorizontalLayoutDemo}
+        />
+        <Block
+            title="Vertical Layout"
+            description={`Form.Row 垂直間的間距為14px，白色與綠色背景是示意區塊範圍，實際使用不會存在。`}
+            demo={VerticalLayoutDemo}
+        />
+        <Block title="Mixed Layout" description={`白色與綠色背景是示意區塊範圍，實際使用不會存在。`} demo={MixedLayoutDemo} />
     </>
 );
 
