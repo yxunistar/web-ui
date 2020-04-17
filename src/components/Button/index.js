@@ -62,10 +62,10 @@ const Button = props => {
 
 Button.propTypes = {
     className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    type: PropTypes.oneOf([CUSTOM, TYPES.PRIMARY, TYPES.SECONDARY, TYPES.IMPORTANT]),
+    type: PropTypes.oneOf([CUSTOM, TYPES.PRIMARY, TYPES.SECONDARY, TYPES.IMPORTANT, TYPES.LINK]),
     active: PropTypes.bool,
     disabled: PropTypes.bool,
-    href: PropTypes.string,
+    href: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     target: PropTypes.string,
     onClick: PropTypes.func,
 };

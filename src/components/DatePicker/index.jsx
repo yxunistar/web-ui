@@ -29,9 +29,9 @@ DatePicker.RangePicker = RangePicker;
 DatePicker.RangePickerFilter = RangePickerFilter;
 
 DatePicker.propTypes = {
-    selected: PropTypes.str,
-    maxDate: PropTypes.str,
-    minDate: PropTypes.str,
+    selected: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    maxDate: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    minDate: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     onChange: PropTypes.func,
 };
 

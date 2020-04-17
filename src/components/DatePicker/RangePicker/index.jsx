@@ -52,14 +52,14 @@ const RangePicker = props => {
 
 RangePicker.propTypes = {
     start: PropTypes.shape({
-        maxDate: PropTypes.str,
-        minDate: PropTypes.str,
-        date: PropTypes.str,
+        maxDate: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+        minDate: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+        date: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     }),
     end: PropTypes.shape({
-        maxDate: PropTypes.str,
-        minDate: PropTypes.str,
-        date: PropTypes.str,
+        maxDate: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+        minDate: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+        date: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     }),
     onStartDateChange: PropTypes.func,
     onEndDateChange: PropTypes.func,
