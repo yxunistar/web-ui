@@ -22,5 +22,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Data Entry|Radio" };
+export default { title: "Data Entry/Radio" };
 export const View = () => <Wrapper title="Radio" document={document} examples={examples} />;

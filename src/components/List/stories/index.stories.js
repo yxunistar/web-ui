@@ -18,5 +18,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Data Display|List" };
+export default { title: "Data Display/List" };
 export const View = () => <Wrapper title="List" document={document} examples={examples} />;

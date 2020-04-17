@@ -14,5 +14,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "General|Icon" };
+export default { title: "General/Icon" };
 export const View = () => <Wrapper title="Icon" document={document} examples={examples} />;

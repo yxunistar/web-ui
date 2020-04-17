@@ -16,5 +16,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Data Entry|DatePicker" };
+export default { title: "Data Entry/DatePicker" };
 export const View = () => <Wrapper title="DatePicker" document={document} examples={examples} />;

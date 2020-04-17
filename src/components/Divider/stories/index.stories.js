@@ -14,5 +14,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Other|Divider" };
+export default { title: "Other/Divider" };
 export const View = () => <Wrapper title="Divider" document={document} examples={examples} />;

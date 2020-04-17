@@ -14,5 +14,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Other|Highlight" };
+export default { title: "Other/Highlight" };
 export const View = () => <Wrapper title="Highlight" document={document} examples={examples} />;

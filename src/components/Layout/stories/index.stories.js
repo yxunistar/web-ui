@@ -17,5 +17,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Layout|Layout" };
+export default { title: "Layout/Layout" };
 export const View = () => <Wrapper title="Layout" document={document} examples={examples} />;

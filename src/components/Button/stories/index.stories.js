@@ -24,5 +24,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "General|Button" };
+export default { title: "General/Button" };
 export const View = () => <Wrapper title="Button" document={document} examples={examples} />;

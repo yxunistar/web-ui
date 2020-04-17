@@ -26,5 +26,5 @@ const examples = () => (
     </>
 );
 
-export default { title: "Data Entry|Form" };
+export default { title: "Data Entry/Form" };
 export const View = () => <Wrapper title="Form" document={document} examples={examples} />;
