@@ -1,8 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
-import { SuccessIcon, ErrorIcon, CalendarIcon } from "components/Icon";
+import { SuccessIcon, ErrorIcon } from "components/Icon";
+import ThemeConsumer from "Theme/ThemeConsumer";
 import Currency from "./Currency";
+import DatePicker from "./DatePicker";
+import "./style.sass";
 
 const Input = ({
     id,
@@ -18,7 +21,7 @@ const Input = ({
     onKeyDown,
     autocomplete,
 }) => {
-    const inputRef = useRef(null);
+    const inputRef = React.createRef();
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => (
@@ -42,17 +45,6 @@ const Input = ({
     );
 };
 
-function DatePicker(props) {
-    return (
-        <span className="input-affix-wrapper suffix">
-            <span className="input-suffix">
-                <CalendarIcon />
-            </span>
-            <Input {...props} />
-        </span>
-    );
-}
-
 // TODO: 之後建立完整的Form表單時，就會移除。
 function Valid(props) {
     function validClass() {
@@ -68,16 +60,20 @@ function Valid(props) {
     }
 
     return (
-        <div className="valid-wrapper">
-            <span className="input-valid-wrapper">
-                <Input className={validClass()} {...props} />
-                {props.value.length > 0 && props.valid && <SuccessIcon />}
-                {props.value.length > 0 && !props.valid && <ErrorIcon />}
-            </span>
-            {props.value.length > 0 && props.validContext && !props.valid && (
-                <div className="invalid-feedback">{props.validContext}</div>
+        <ThemeConsumer>
+            {({ getThemeClass }) => (
+                <div className={cx(getThemeClass("valid-wrapper"))}>
+                    <span className="input-valid-wrapper">
+                        <Input className={validClass()} {...props} />
+                        {props.value.length > 0 && props.valid && <SuccessIcon />}
+                        {props.value.length > 0 && !props.valid && <ErrorIcon />}
+                    </span>
+                    {props.value.length > 0 && props.validContext && !props.valid && (
+                        <div className="invalid-feedback">{props.validContext}</div>
+                    )}
+                </div>
             )}
-        </div>
+        </ThemeConsumer>
     );
 }
 

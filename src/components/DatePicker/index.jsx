@@ -5,6 +5,7 @@ import ReactDatePicker from "react-datepicker";
 import ThemeConsumer from "Theme/ThemeConsumer";
 import RangePicker from "./RangePicker";
 import RangePickerFilter from "./RangePickerFilter";
+import Input from "Input";
 
 import "react-datepicker/src/stylesheets/datepicker.scss";
 import "./style.sass";
@@ -18,7 +19,7 @@ const DatePicker = props => (
                 maxDate={props.maxDate}
                 minDate={props.minDate}
                 onChange={props.onChange}
-                customInput={<input onClick={props.onClick} />}
+                customInput={<Input.Date onClick={props.onClick} />}
                 calendarClassName={cx(getThemeClass("calendar", props.theme))}
             />
         )}

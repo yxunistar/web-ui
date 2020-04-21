@@ -9,3 +9,4 @@ export { default as Layout } from "components/Layout";
 export { default as List } from "components/List";
 export { default as Radio } from "components/Radio";
 export { default as Theme } from "components/Theme";
+export { default as Input } from "components/Input";

@@ -1,0 +1,154 @@
+.unistar-input
+    height: 26px
+    border-radius: 3px
+    padding: 0 12px
+    font-size: 12px
+
+.input-affix-wrapper
+    width: inherit
+    position: relative
+    display: inline-block
+
+    &.prefix
+        input
+            padding-left: 30px
+
+    &.suffix
+        input
+            padding-right: 30px
+
+    .input-prefix
+        display: flex
+        align-items: center
+        position: absolute
+        top: 50%
+        left: 12px
+        line-height: 0
+        pointer-events: none
+
+    .input-suffix
+        display: flex
+        align-items: center
+        position: absolute
+        top: 5px
+        right: 12px
+        line-height: 0
+        pointer-events: none
+
+.unistar-valid-wrapper
+    display: flex
+
+    .input-valid-wrapper
+        position: relative
+
+        .icon-success
+            position: absolute
+            top: 5px
+            right: 5px
+
+        .icon-error
+            position: absolute
+            top: 5px
+            right: 5px
+
+        input
+            padding-right: 32px
+
+    .invalid-feedback
+        display: flex
+        align-items: center
+        height: 28px
+        box-shadow: inset 0px 2px 3px 0 rgba(0, 0, 0, 0.11)
+        border-radius: 3px
+        padding: 7px
+        margin-left: 5px
+
+.unistar-input-early
+    border: 1px solid #c3c3c3
+    background: rgba(255, 255, 255, 0.5)
+    color: #5e5e5e
+
+    &.success
+        border: 1px solid #439a02
+
+        &:hover
+            border: 1px solid #439a02
+
+        &:focus
+            border: 1px solid #439a02
+
+    &.error
+        border: 1px solid #ff5243
+
+        &:hover
+            border: 1px solid #ff5243
+
+        &:focus
+            border: 1px solid #ff5243
+
+    &:focus
+        border: 1px solid rgb(82, 200, 249)
+
+    &:hover
+        border: 1px solid rgb(82, 200, 249)
+
+    &:disabled
+        color: #5e5e5e
+        background: rgba(191, 191, 191, 0.34)
+
+.unistar-input-night
+    border: 1px solid #8d8f99
+    background: rgba(255, 255, 255, 0.25)
+    color: #fff
+
+    &.success
+        border: 1px solid #75cd2d
+
+        &:hover
+            border: 1px solid #75cd2d
+
+        &:focus
+            border: 1px solid #75cd2d
+
+    &.error
+        border: 1px solid #ff5243
+
+        &:hover
+            border: 1px solid #ff5243
+
+        &:focus
+            border: 1px solid #ff5243
+
+    &:focus
+        border: 1px solid rgb(82, 200, 249)
+
+    &:hover
+        border: 1px solid rgb(82, 200, 249)
+
+    &:disabled
+        color: #5e5e5e
+        background: rgba(192, 192, 192, 0.35)
+    
+    &::-webkit-input-placeholder
+        color: #ffffff
+
+    &:-moz-placeholder
+        color: #ffffff
+
+    &::-moz-placeholder
+        color: #ffffff
+
+    &:-ms-input-placeholder
+        color: #ffffff
+
+.unistar-valid-wrapper-early
+    .invalid-feedback
+        color: #ff5243
+        background: rgba(254, 218, 215, 0.9)
+        border: 1px solid #ff5243
+
+.unistar-valid-wrapper-night
+    .invalid-feedback
+        color: #ff5243
+        background: rgba(254, 218, 215, 0.9)
+        border: 1px solid #ff5243
