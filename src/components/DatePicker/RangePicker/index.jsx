@@ -21,7 +21,7 @@ const RangePicker = props => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => (
-                <div className={cx(getThemeClass("range-pciker", props.theme))}>
+                <div className={cx(getThemeClass("range-picker", props.theme))}>
                     <DatePicker
                         selected={startDate}
                         maxDate={props.start.maxDate}

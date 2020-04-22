@@ -90,7 +90,7 @@ class RangePickerFilter extends React.Component {
         return (
             <ThemeConsumer>
                 {({ getThemeClass }) => (
-                    <div className={cx(getThemeClass("range-pciker-filter", this.props.theme))}>
+                    <div className={cx(getThemeClass("range-picker-filter", this.props.theme))}>
                         <Button
                             type="custom"
                             className={cx({
