@@ -7,7 +7,7 @@ import RangePicker from "./RangePicker";
 import RangePickerFilter from "./RangePickerFilter";
 import Input from "Input";
 
-import "react-datepicker/src/stylesheets/datepicker.scss";
+import "react-datepicker/dist/react-datepicker.min.css";
 import "./style.sass";
 
 const DatePicker = props => (
