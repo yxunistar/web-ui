@@ -54,16 +54,16 @@ class RangePickerFilter extends React.Component {
                 this.handleDate(-1);
                 break;
             case "SEVEN_DAY":
-                this.handleDate(-7);
+                this.handleDate(-6);
                 break;
             case "FIFTEEN_DAY":
-                this.handleDate(-15);
+                this.handleDate(-14);
                 break;
             case "THIRTY_DAY":
-                this.handleDate(-30);
+                this.handleDate(-29);
                 break;
             case "NINETY_DAY":
-                this.handleDate(-90);
+                this.handleDate(-89);
                 break;
         }
         this.setState({ selectRange: rangeType });
