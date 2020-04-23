@@ -39,7 +39,7 @@ class RangePickerFilter extends React.Component {
             },
             end: {
                 ...this.state.end,
-                date: today,
+                date: day === -1 ? date : today,
             },
         });
         this.props.onFilterChange(this.dateFormatter(date), this.dateFormatter(today));
