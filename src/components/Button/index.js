@@ -17,23 +17,25 @@ const Button = props => {
         <ThemeConsumer>
             {({ getThemeClass }) => {
                 if (props.type === TYPES.LINK && typeof props.href !== "undefined") {
-                    return (
-                        <a
-                            className={cx(
+                    return React.createElement(
+                        "a",
+                        {
+                            className: cx(
                                 getThemeClass("button"),
                                 {
                                     link: true,
                                     active: props.active,
                                 },
                                 props.className
-                            )}
-                            href={props.href}
-                            target={props.target || "_blank"}
-                            disabled={props.disabled}
-                            onClick={props.onClick}
-                        >
-                            {props.children}
-                        </a>
+                            ),
+                            target: props.target || "_blank",
+                            disabled: props.disabled,
+                            onClick: props.onClick,
+                            ...(props.href.length && {
+                                href: props.href,
+                            }),
+                        },
+                        props.children
                     );
                 }
                 return (
@@ -65,7 +67,7 @@ Button.propTypes = {
     type: PropTypes.oneOf([CUSTOM, TYPES.PRIMARY, TYPES.SECONDARY, TYPES.IMPORTANT, TYPES.LINK]),
     active: PropTypes.bool,
     disabled: PropTypes.bool,
-    href: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    href: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     target: PropTypes.string,
     onClick: PropTypes.func,
 };
