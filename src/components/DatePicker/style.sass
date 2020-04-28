@@ -11,6 +11,7 @@
 
         .react-datepicker__header
             border-bottom: none
+            background-color: transparent
 
             .react-datepicker__current-month
                 border-bottom: none
@@ -69,14 +70,12 @@
         .react-datepicker__month-container
             background-color: rgba(#2d3b58, 0.85)
 
-            .react-datepicker__header
-                background-color: rgba(#2d3b58, 0.85)
-
         .react-datepicker__triangle
             border-bottom-color: rgba(46, 62, 104, 0)
 
             &:before
-                background-color: rgba(#2d3b58, 0.85)
+                border-bottom-color: #2d3b58
+                opacity: 0.85
                 z-index: 10
                 top: 0
                 left: -25px
@@ -85,12 +84,7 @@
 .react-datepicker-popper
     .unistar-calendar-night
         .react-datepicker__month-container
-            background-color: #2e3e68
-            opacity: 0.98
-
-            .react-datepicker__header
-                background-color: #2e3e68
-                opacity: 0.98
+            background-color: rgba(#2e3e68, 0.98)
 
         .react-datepicker__triangle
             border-bottom-color: rgba(46, 62, 104, 0)
