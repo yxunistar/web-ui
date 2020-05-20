@@ -1,0 +1,342 @@
+$blur-stragth: 5px
+$box-length: 40px
+$box-shadow-size: $box-length / 5
+$dot-size: $box-length / 5.7
+$box-half: $box-length / 2
+
+=cube-box($length: $box-length)
+    width: $length
+    height: $length
+
+@keyframes getting-started-rotate
+    0%
+        transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) rotate3d(0, 0, 0, -100deg)
+
+    100%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -200deg)
+
+@keyframes getting-stopped-rotate
+    0%
+        transform: rotateZ(-144deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -200deg)
+
+    100%
+        transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg) rotate3d(0, 0, 0, 0deg)
+
+@keyframes getting-speed-up
+    0%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -200deg)
+
+    50%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -560deg)
+
+    100%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -1120deg)
+
+@keyframes getting-speed-down
+    0%
+        transform: rotateZ(-144deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -1120deg)
+
+    50%
+        transform: rotateZ(-144deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -560deg)
+
+    100%
+        transform: rotateZ(-144deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -200deg)
+
+@keyframes rotate
+    0%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -40deg)
+
+    50%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -400deg)
+
+    100%
+        transform: rotateZ(36deg) rotateY(0deg) rotateX(-45deg) rotate3d(1, 1, 1, -760deg)
+
+@keyframes getting-blur-up
+    from
+        filter: blur(0)
+
+    to
+        filter: blur($blur-stragth)
+
+@keyframes getting-blur-down
+    from
+        filter: blur($blur-stragth)
+
+    to
+        filter: blur(0)
+
+@keyframes active-click
+    0%
+        transform: scale(1)
+
+    90%
+        transform: scale(0.95)
+
+    0%
+        transform: scale(1)
+
+=side-front($distance)
+    transform: rotateY(0deg) translateZ($distance)
+
+=side-back($distance)
+    transform: rotateY(180deg) translateZ($distance)
+
+=side-left($distance)
+    transform: rotateY(-90deg) translateZ($distance)
+
+=side-right($distance)
+    transform: rotateY(90deg) translateZ($distance)
+
+=side-top($distance)
+    transform: rotateX(90deg) translateZ($distance)
+
+=side-bottom($distance)
+    transform: rotateX(-90deg) translateZ($distance)
+
+=side-cube($distance)
+    &.front
+        +side-front($distance)
+
+    &.back
+        +side-back($distance)
+
+    &.left
+        +side-left($distance)
+
+    &.right
+        +side-right($distance)
+
+    &.top
+        +side-top($distance)
+
+    &.bottom
+        +side-bottom($distance)
+
+*:not(.lottery-dice):hover > .sence.disabled:not(.active)
+    .dice
+        .side
+            box-shadow: none
+
+            &:before
+                width: 100%
+                height: 100%
+                display: block
+                position: absolute
+                content: ""
+                border-radius: 20%
+                box-sizing: border-box
+                border: 2px solid #ff616d
+                background-color: rgba(#ff616d, 0.2)
+
+            .dot, .dot.red, .x
+                box-shadow: none
+                background-color: #FFF
+
+.dice-block
+    max-width: 95px
+    text-align: center
+
+    &.dice-3 .sence:first-of-type
+        display: block
+        margin: 0 auto
+
+    .sence
+        margin: 5px 3px
+        transform: scale(0.87)
+        box-sizing: border-box
+
+.sence
+    margin: 0
+    perspective: 150px
+    display: inline-block
+    transition: margin 1.2s
+
+    +cube-box
+
+    &.disabled
+        .dice
+            & > :not(.front)
+                display: none
+
+            .side
+                border-radius: 20%
+
+    &.active
+        animation-name: active-click
+        animation-duration: 0.2s
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+        animation-timing-function: ease-out
+
+        .dice .side
+            box-shadow: none
+            background-color: #ff616d
+
+            &:before
+                background-color: #ff616d
+
+            .dot, .dot.red, .x
+                box-shadow: none
+                background-color: #FFF
+
+    &.ie
+        .inner
+            display: none
+
+        .x, .y, .z
+            display: none
+
+    &:not(.ie)
+        .dice
+            &.getting
+                &.started
+                    animation-name: getting-started-rotate
+
+                &.stopped
+                    animation-name: getting-stopped-rotate
+
+                &.speed
+                    &.up
+                        animation-name: getting-speed-up
+
+                        .dot, .x
+                            animation-name: getting-blur-up
+
+                    &.down
+                        animation-name: getting-speed-down
+
+                        .dot, .x
+                            animation-name: getting-blur-down
+
+            &.rotating
+                animation-name: rotate
+
+    .dice
+        position: relative
+        transition: transform 0.3s
+        transform-style: preserve-3d
+
+        +cube-box(100%)
+
+        &.getting
+            animation-duration: 0.6s
+            animation-iteration-count: 1
+            animation-fill-mode: forwards
+
+            &.started
+                animation-timing-function: ease-in
+
+            &.stopped
+                animation-timing-function: ease-out
+
+            &.speed
+                animation-duration: 1.4s
+                animation-timing-function: linear
+
+                .dot, .x
+                    animation-duration: 0.7s
+                    animation-timing-function: linear
+
+                &.up
+                    .dot, .x
+                        animation-delay: 0.7s
+
+        &.rotating
+            animation-duration: 0.7s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+
+            .dot, .x
+                filter: blur($blur-stragth)
+
+        .side
+            text-align: center
+            position: absolute
+            border-radius: 30%
+            background-color: #FFF
+            box-shadow: inset 0 0 $box-shadow-size #ccc
+
+            +cube-box($box-length)
+            +side-cube($box-half)
+
+            .dot
+                position: absolute
+                border-radius: 100%
+                background-color: #363636
+                box-shadow: inset 0 3px 6px rgba(#000, 0.27)
+
+                +cube-box($dot-size)
+
+                &.bigger
+                    +cube-box($box-length / 3.5)
+
+                &.center:not(.left):not(.right):not(.top):not(.bottom)
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+                &.left
+                    left: $dot-size
+
+                    &.center
+                        transform: translateY(-50%)
+                        top: 50%
+
+                &.top
+                    top: $dot-size
+
+                    &.center
+                        transform: translateX(-50%)
+                        left: 50%
+
+                &.right
+                    right: $dot-size
+
+                    &.center
+                        transform: translateY(-50%)
+                        top: 50%
+
+                &.bottom
+                    bottom: $dot-size
+
+                    &.center
+                        transform: translateX(-50%)
+                        left: 50%
+
+                &.red
+                    background-color: #ff1d1d
+
+            .x
+                background-color: #303030
+                display: block
+                position: absolute
+                width: 35px
+                height: 5px
+                transform: rotate(45deg) scale(0.7)
+                top: calc(50% - 2px)
+                left: calc(50% - 17.32px)
+
+                &:last-of-type
+                    transform: rotate(-45deg) scale(0.7)
+
+        .inner
+            +cube-box($box-length)
+            +side-cube($box-half - 1px)
+
+            background-color: #e0e0e0
+
+        .cover
+            background-color: #e0e0e0
+            position: absolute
+
+            +cube-box($box-length - 1px)
+
+            &.x
+                transform: rotateY(90deg)
+
+            &.y
+                transform: rotateZ(0deg)
+
+            &.z
+                transform: rotateX(90deg)
