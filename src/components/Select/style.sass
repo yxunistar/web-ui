@@ -1,0 +1,174 @@
+.unistar-select
+    box-sizing: border-box
+    display: inline-block
+    line-height: 20px
+    position: relative
+    user-select: none
+    -ms-user-select: none
+
+    &.active
+        button
+            color: #ffffff
+            border: solid 1px rgb(53, 191, 248)
+            background-color: rgb(54, 169, 251)
+
+            .unistar-icon-down
+                fill: #ffffff
+                transform: scaleY(-1)
+
+            &:hover
+                color: #ffffff
+
+                .unistar-icon-down
+                    fill: #ffffff
+
+        .menu-wrapper
+            &::before
+                display: block
+
+            > .menu
+                display: block
+
+    button
+        display: flex
+        justify-content: left
+        align-items: center
+
+        border: 1px solid rgb(168, 168, 168)
+        border-radius: 4px
+        min-width: 80px
+        height: 28px
+        font-size: 15px
+        padding: 0 35px 0 8px
+        line-height: 1
+
+        &:hover
+            color: #52c8f9
+            border: solid 1px rgb(82, 200, 249)
+            box-shadow: none
+
+            .unistar-icon-down
+                fill: #52c8f9
+
+        &[disabled]
+            background-image: none
+            background-color: transparent
+            border: solid 1px rgba(0, 0, 0, 0.13)
+            box-shadow: none
+            color: #b6b6b6
+            cursor: not-allowed
+
+            .unistar-icon-down
+                fill: rgba(0, 0, 0, 0.13)
+
+        .unistar-icon-down
+            position: absolute
+            top: 8px
+            right: 9px
+
+    .menu-wrapper
+        position: absolute
+        left: 50%
+        font-size: 15px
+
+        &::before
+            content: ""
+            position: absolute
+            left: 50%
+            margin-left: -5px
+            top: 0
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 6px 6px 6px
+            display: none
+
+    .menu
+        border-radius: 4px
+        position: absolute
+        top: 100%
+        left: 0
+        margin-top: 5px
+        min-width: 98px
+        z-index: 1000
+        padding: 11px 0
+        max-height: 265px
+        display: none
+        transform: translateX(-50%)
+        box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.36)
+        background-color: rgba(45, 59, 88, 0.98)
+
+        .menu-item-wrapper
+            .item
+                display: flex
+                align-items: center
+                color: #ffffff
+                cursor: pointer
+                padding: 4px 16px
+                font-weight: normal
+                text-decoration: none
+                white-space: nowrap
+                height: 28px
+
+                .unistar-icon-right
+                    position: absolute
+                    top: 8px
+                    right: 10px
+
+                &:hover
+                    color: #52c8f9
+                    background: rgba(0, 0, 0, 0.24)
+
+                    .unistar-icon-right
+                        fill: #52c8f9
+
+                &:active
+                    color: #ffffff
+                    background-color: rgb(54, 169, 251)
+
+                    .unistar-icon-right
+                        fill: #ffffff
+
+                &.active
+                    color: #36a9fb
+
+                &.disabled
+                    color: rgba(255, 255, 255, 0.3)
+
+            &.submenu
+                position: relative
+
+                .item
+                    padding-right: 24px
+
+                .menu
+                    top: 0
+                    left: 100%
+                    margin-top: 0
+                    transform: none
+
+                &:hover
+                    > .menu
+                        display: block
+
+// early
+.unistar-select-early
+    button
+        background: rgba(255, 255, 255, 0.4)
+        color: #5e5e5e
+
+    .menu-wrapper
+        &::before
+            border-color: transparent transparent rgba(45, 59, 88, 0.98) transparent
+            box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.36)
+
+// night
+.unistar-select-night
+    button
+        background: rgba(255, 255, 255, 0.2)
+        color: #ffffff
+
+    .menu-wrapper
+        &::before
+            border-color: transparent transparent rgba(46, 62, 104, 0.98) transparent
+            box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.36)
