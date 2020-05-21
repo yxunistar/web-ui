@@ -21,6 +21,12 @@ const DefaultDemo = () => {
                 <Column>
                     <Icon.Refresh />
                 </Column>
+                <Column>
+                    <Icon.Down />
+                </Column>
+                <Column>
+                    <Icon.Right />
+                </Column>
             </Row>
         </>
     );
