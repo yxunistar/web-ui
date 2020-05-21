@@ -20,8 +20,8 @@ const Input = ({
     onClick,
     onKeyDown,
     autocomplete,
+    ref,
 }) => {
-    const inputRef = React.createRef();
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => (
@@ -38,7 +38,7 @@ const Input = ({
                     maxLength={maxLength}
                     placeholder={placeholder}
                     autoComplete={autocomplete}
-                    ref={inputRef}
+                    ref={ref}
                 />
             )}
         </ThemeConsumer>

@@ -11,5 +11,4 @@ export { default as Radio } from "components/Radio";
 export { default as Theme } from "components/Theme";
 export { default as Input } from "components/Input";
 export { default as Dice } from "components/Dice";
-export default from "components";
 export { default as Select } from "components/Select";
