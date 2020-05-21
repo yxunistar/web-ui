@@ -18,6 +18,9 @@ const DefaultDemo = () => {
                 <Column>
                     <Icon.Calendar />
                 </Column>
+                <Column>
+                    <Icon.Refresh />
+                </Column>
             </Row>
         </>
     );
