@@ -1,0 +1,31 @@
+.unistar-split-layout-menu
+    a.item
+        display: flex
+        align-items: center
+        font-size: 12px
+        color: #fff
+        padding: 9px 0
+        padding-left: 47px
+        cursor: pointer
+
+        &:hover, &:active, &.active
+            color: #77c5fd
+
+        &:active, &.active
+            &:before
+                content: ""
+                margin-left: -19px
+                width: 10px
+                height: 10px
+                border-radius: 100%
+                position: absolute
+                background-color: currentColor
+
+    div.item-group
+        a.item.header
+            padding-left: 33px
+            font-size: 13px
+
+            &:active, &.active
+                &:before
+                    display: none
