@@ -10,12 +10,12 @@
 7. Highlight
 8. Icon
 9. Input
-10.Layout
-11.List
-12.Radio
-13.Select
-14.SplitLayout
-15.Tag
+10. Layout
+11. List
+12. Radio
+13. Select
+14. SplitLayout
+15. Tag
 
 打包元件庫到dist
 yarn build
