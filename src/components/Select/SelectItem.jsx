@@ -2,7 +2,7 @@ import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
 import SelectMenu from "./SelectMenu";
-import Icon from "components/Icon";
+import Icon from "../Icon";
 
 class SelectItem extends React.Component {
     handleClick = event => {

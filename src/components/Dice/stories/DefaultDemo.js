@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Column } from "layout";
-import Dice from "Dice";
+import { Row, Column } from "./components/layout";
+import Dice from "./components/Dice";
 
 const DefaultDemo = () => {
     return (

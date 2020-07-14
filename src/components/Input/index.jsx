@@ -1,8 +1,8 @@
 import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
-import { SuccessIcon, ErrorIcon } from "components/Icon";
-import ThemeConsumer from "Theme/ThemeConsumer";
+import { SuccessIcon, ErrorIcon } from "../Icon";
+import ThemeConsumer from "../Theme/ThemeConsumer";
 import Currency from "./Currency";
 import DatePicker from "./DatePicker";
 import "./style.sass";

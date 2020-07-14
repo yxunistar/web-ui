@@ -3,7 +3,7 @@ import cx from "classnames";
 import ThemeConsumer from "Theme/ThemeConsumer";
 import "./style.sass";
 
-const Error = () => {
+const ErrorIcon = () => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => (
@@ -17,4 +17,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default ErrorIcon;

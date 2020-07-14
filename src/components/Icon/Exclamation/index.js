@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeConsumer from "Theme/ThemeConsumer";
+import ThemeConsumer from "../../Theme/ThemeConsumer";
 import cx from "classnames";
 import "./style.sass";
 

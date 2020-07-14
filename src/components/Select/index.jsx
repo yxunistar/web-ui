@@ -1,9 +1,9 @@
 import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
-import Button from "components/Button";
-import Icon from "components/Icon";
-import ThemeConsumer from "Theme/ThemeConsumer";
+import Button from "../";
+import Icon from "../Icon";
+import ThemeConsumer from "../Theme/ThemeConsumer";
 import SelectMenu from "./SelectMenu";
 import SelectItem from "./SelectItem";
 import "./style.sass";

@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "components/Layout";
-import Form from "Form";
-import Divider from "Divider";
+import Layout from "./components/Layout";
+import Form from "./components/Form";
+import Divider from "./components/Divider";
 
 const ContainsDividerAndFormDemo = () => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
-import { Calendar } from "components/Icon";
-import Input from "Input";
+import { Calendar } from "../../Icon";
+import Input from "../../Input";
 
 const DatePicker = props => (
     <span className="input-affix-wrapper suffix">

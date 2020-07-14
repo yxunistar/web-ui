@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Radio from "Radio/index";
+import Radio from "./components/Radio";
 
 const RadioGroupDemo = () => {
     const [value, setValue] = useState("Peggy");

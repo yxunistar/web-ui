@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Block } from "layout";
+import { Wrapper, Block } from "/src/layout";
 import RadioGroupDemo from "./RadioGroupDemo";
 import RadioDemo from "./RadioDemo";
 import SizeDemo from "./SizeDemo";

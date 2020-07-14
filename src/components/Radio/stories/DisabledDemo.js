@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Radio from "Radio";
-import Form from "Form";
+import Radio from "./components/Radio";
+import Form from "./components/Form";
 
 const DisabledDemo = () => {
     const [smallValue, setSmallValue] = useState("Peggy");

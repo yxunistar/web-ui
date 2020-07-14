@@ -1,9 +1,9 @@
 import React from "react";
 import cx from "classnames";
-import ThemeConsumer from "Theme/ThemeConsumer";
+import ThemeConsumer from "../../Theme/ThemeConsumer";
 import "./style.sass";
 
-const Success = () => {
+const SuccessIcon = () => {
     return (
         <ThemeConsumer>
             {({ getThemeClass }) => (
@@ -15,4 +15,4 @@ const Success = () => {
     );
 };
 
-export default Success;
+export default SuccessIcon;

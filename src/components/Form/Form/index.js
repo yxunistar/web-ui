@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import ThemeConsumer from "Theme/ThemeConsumer";
+import ThemeConsumer from "../../Theme/ThemeConsumer";
 import "./style.sass";
 
 class Form extends React.PureComponent {

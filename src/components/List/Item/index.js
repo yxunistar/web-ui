@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ThemeConsumer from "Theme/ThemeConsumer";
-import { Exclamation } from "components/Icon";
+import ThemeConsumer from "../../Theme/ThemeConsumer";
+import { Exclamation } from "../../Icon";
 import cx from "classnames";
 import "./style.sass";
 

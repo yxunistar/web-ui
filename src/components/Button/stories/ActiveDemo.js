@@ -1,6 +1,6 @@
 import React from "react";
-import { Column, Row } from "layout";
-import Button from "Button";
+import { Column, Row } from "/src/layout";
+import Button from "../";
 
 const ActiveDemo = () => {
     return (
