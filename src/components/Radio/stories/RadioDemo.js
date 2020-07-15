@@ -1,6 +1,6 @@
 import React from "react";
-import Radio from "./components/Radio";
-import { Row, Column } from "/src/layout";
+import Radio from "../Radio";
+import { Column, Row } from "../../../layout";
 
 const RadioDemo = () => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ThemeConsumer from "./components/Theme/ThemeConsumer";
+import ThemeConsumer from "../../../Theme/ThemeConsumer";
 import cx from "classnames";
 import "./style.sass";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { Row } from "/src/layout";
-import Select from "./components/Select";
+import { Row } from "../../../layout";
+import Select from "../../Select";
 
 const DefaultDemo = () => {
     return (

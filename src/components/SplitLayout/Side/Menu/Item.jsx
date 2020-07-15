@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { withRouter } from "react-router-dom";
 import { context } from "../../context";
-import { Badge, Tag } from "@components";
+import Badge from "../../../Badge";
+import Tag from "../../../Tag";
+
 import "./style";
 
 const TYPE = {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Row } from "layout";
-import Select from "./components/Select";
+import Select from "../../Select";
 
 const TwoLevelSelectDemo = () => {
     return (

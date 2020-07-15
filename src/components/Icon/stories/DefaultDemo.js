@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Column } from "/src/layout";
-import Icon from "./components/Icon";
+import { Column, Row } from "../../../layout";
+import Icon from "../index";
 
 const DefaultDemo = () => {
     return (

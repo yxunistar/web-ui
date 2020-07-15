@@ -1,4 +1,3 @@
-// eslint-disable-next-line filenames/match-exported
 export { default as Badge } from "./Badge";
 export { default as Button } from "./Button";
 export { default as DatePicker } from "./DatePicker";

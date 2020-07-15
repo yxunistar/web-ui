@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, Block } from "/src/layout";
+import { Wrapper, Block } from "../../../layout";
 import DefaultDemo from "./DefaultDemo";
 
 const document = () => (

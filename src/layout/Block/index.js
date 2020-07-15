@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ThemeConsumer from "./components/Theme/ThemeConsumer";
+import ThemeConsumer from "../../components/Theme/ThemeConsumer";
 import "./style.sass";
 import cx from "classnames";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
