@@ -7,7 +7,7 @@ const CurrencyDemo = () => {
     return (
         <>
             <Row>
-                <Input.Currency amount={amount} onChange={e => setAmount(e.target.value)} />
+                <Input.Currency regex={/^[0-9,]+$/} amount={amount} onChange={e => setAmount(e.target.value)} />
             </Row>
         </>
     );

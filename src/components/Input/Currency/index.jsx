@@ -41,8 +41,8 @@ const Currency = React.forwardRef((props, ref) => {
             return;
         }
 
-        // 非數值不更新
-        if (!/^[0-9.,-]+$/.test(e.target.value)) return;
+        const reg = props.regex ? props.regex : /^[0-9.,-]+$/;
+        if (!reg.test(e.target.value)) return;
 
         const formatAmount = format(e.target.value, props.digit);
         props.onChange(
@@ -65,8 +65,8 @@ const Currency = React.forwardRef((props, ref) => {
             return;
         }
 
-        // 非數值不更新
-        if (!/^[0-9.,-]+$/.test(`${props.amount}`)) return;
+        const reg = props.regex ? props.regex : /^[0-9.,-]+$/;
+        if (!reg.test(`${props.amount}`)) return;
 
         const formatAmount = format(props.amount, props.digit);
         setAmount(formatAmount);
@@ -85,6 +85,7 @@ Currency.propTypes = {
     digit: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([null])]),
     onChange: PropTypes.func,
     onKeyDown: PropTypes.func,
+    regex: PropTypes.string,
 };
 
 Currency.defaultProps = {
@@ -94,7 +95,10 @@ Currency.defaultProps = {
     onChange(originAmount, formatAmount) {
         console.log(originAmount, formatAmount);
     },
-    onKeyDown() {},
+    onKeyDown: e => {
+        console.log("onKeyDown", e);
+    },
+    regex: "",
 };
 
 export default Currency;
